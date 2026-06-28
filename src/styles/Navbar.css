@@ -1,0 +1,142 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: #000;  /* always black, no gradient */
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 150px;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.bull-logo {
+  height: 50px;
+  width: auto;
+  filter: invert(1);
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 2px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Fullscreen menu */
+.fullscreen-menu {
+  position: fixed;
+  inset: 0;
+  background: #0a0a0a;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  padding: 120px 6% 40px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.fullscreen-menu.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Main links grid - 3 columns */
+.menu-main-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-bottom: 40px;
+}
+
+.main-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 20px 0;
+  border-bottom: 1px solid #333;
+  padding-right: 40px;
+  transition: color 0.3s;
+}
+
+.main-link:hover {
+  color: #e8c840;
+}
+
+.menu-divider {
+  width: 100%;
+  height: 1px;
+  background: #333;
+  margin: 20px 0;
+}
+
+/* Sub links grid - 3 columns */
+.menu-sub-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.sub-link {
+  display: block;
+  color: #aaa;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 16px 0;
+  border-bottom: 1px solid #222;
+  padding-right: 40px;
+  transition: color 0.3s;
+}
+
+.sub-link:hover {
+  color: #fff;
+}
+
+.menu-footer {
+  margin-top: auto;
+  padding-top: 40px;
+}
+
+.languages {
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}

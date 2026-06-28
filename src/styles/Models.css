@@ -1,0 +1,137 @@
+    .models-page {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 80px;
+    background: #fff;
+    }
+
+    .model-slide {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #f5f5f5;
+    transition: background 0.5s ease;
+    }
+
+    .model-center {
+    text-align: center;
+    z-index: 1;
+    padding: 40px 0;
+    }
+
+    .model-name {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: #111;
+    margin-bottom: 10px;
+    font-style: italic;
+    }
+
+    .model-tagline {
+    font-size: 60px;
+    font-weight: 900;
+    color: #111;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    max-width: 900px;
+    line-height: 1.1;
+    }
+
+    .model-img {
+    width: 600px;
+    max-width: 90vw;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 40px;
+    }
+
+    .model-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    }
+
+    .btn-explore {
+    display: inline-block;
+    padding: 18px 36px;
+    background: #8a7200;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: background 0.3s;
+    }
+
+    .btn-explore:hover {
+    background: #b89600;
+    }
+
+    .btn-config, .btn-enquire {
+    background: none;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: #111;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 2px solid #111;
+    padding-bottom: 4px;
+    transition: opacity 0.3s;
+    }
+
+    .btn-config:hover, .btn-enquire:hover {
+    opacity: 0.6;
+    }
+
+    /* Arrows */
+    .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 2px solid #333;
+    color: #333;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background 0.3s;
+    }
+
+    .arrow:hover {
+    background: rgba(0,0,0,0.1);
+    }
+
+    .arrow-left { left: 4%; }
+    .arrow-right { right: 4%; }
+
+    /* Peek of next car */
+    .next-peek {
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.4;
+    pointer-events: none;
+    }
+
+    .next-peek img {
+    width: 250px;
+    object-fit: contain;
+    }
