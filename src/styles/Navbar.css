@@ -140,3 +140,62 @@
   letter-spacing: 2px;
   cursor: pointer;
 }
+.menu-footer {
+  margin-top: auto;
+  padding-top: 40px;
+  border-top: 1px solid #333;
+}
+
+.lang-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang-dropdown {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background: #000;
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  margin-bottom: 10px;
+}
+
+.lang-option {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  cursor: pointer;
+  padding: 14px 20px;
+  text-align: left;
+  transition: 0.3s;
+  border-bottom: 1px solid #222;
+}
+
+.lang-option:hover {
+  color: #fff;
+  background: #111;
+}
+
+.lang-option.active {
+  color: #fff;
+  background: #1a1a1a;
+}

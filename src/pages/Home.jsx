@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/Home.css'
 
+
 const models = [
   { 
     name: 'TEMERARIO', 
@@ -31,6 +32,22 @@ const Home = () => {
   const prev = () => setCurrent(current === 0 ? models.length - 1 : current - 1)
   const next = () => setCurrent(current === models.length - 1 ? 0 : current + 1)
   const model = models[current]
+  const newsPages = [
+  [
+    { img: '/src/assets/news2.jpg', tag: 'URUS', date: '1 JULY 2026', title: 'LAMBORGHINI URUS SE PERFORMANTE: THE SUPER SUV AT ITS PEAK' },
+    { img: '/src/assets/news3.jpg', tag: 'EVENTS', date: '29 JUNE 2026', title: '"ESPERIENZA LAMBORGHINI": THE WORLD FROM BEHIND THE WHEEL' },
+    { img: '/src/assets/news4.jpg', tag: 'CORPORATE', date: '26 JUNE 2026', title: 'CHRISTIAN MASTRO NAMED CEO OF LAMBORGHINI AMERICA' },
+  ],
+  [
+    { img: '/src/assets/news5.jpg', tag: 'Explore', date: '25 JUNE 2026', title: 'Save The Date' },
+    { img: '/src/assets/news6.jpg', tag: 'SUSTAINABILITY', date: '25 JUNE 2026', title: 'LAMBORGHINI PUBLISHES 2025 SUSTAINABILITY REPORT' },
+    { img: '/src/assets/news7.jpg', tag: 'MOTORSPORT', date: '22 JUNE 2026', title: 'LAMBORGHINI SUPER SUVS: FROM LM002 TO URUS SE' },
+
+  ],
+  [    { img: '/src/assets/news8.jpg', tag: 'DESIGN', date: '18 JUNE 2026', title: 'FENOMENO ROADSTER: DESIGN THROUGH MITJA BORKERT\'S EYES' },]
+  // add more pages as needed
+      ]
+  const [newsPage, setNewsPage] = useState(0)
 
   return (
     <div className="home">
@@ -116,10 +133,47 @@ const Home = () => {
     Energy consumption (weighted combined): 4,3 kWh/100 Km plus 11,2 l/100km; CO2 emissions (weighted combined): 272 g/km; CO2 class (weighted combined): G; CO2 class with discharged battery: G; Fuel consumption with discharged battery (combined): 14 l/100km
     </p>
     </div>
+        {/* NEWS SECTION */}
+<div className="news-section">
+  <div className="news-header">
+    <h2 className="news-title">NEWS LAMBORGHINI WORLD</h2>
+    <Link to="/news" className="read-more">READ MORE →</Link>
+  </div>
 
+  <div className="news-featured">
+    <img src="/src/assets/news1.jpg" alt="Lamborghini x Apple Vision Pro" className="news-img" />
+    <div className="news-meta">
+      <span className="news-tag">CORPORATE</span>
+      <p className="news-date">7 JULY 2026</p>
+      <h3 className="news-headline">LAMBORGHINI X APPLE VISION PRO</h3>
+    </div>
+  </div>
 
+  <div className="news-grid">
+    {newsPages[newsPage].map((article, i) => (
+      <div className="news-card" key={i}>
+        <img src={article.img} alt={article.title} className="news-card-img" />
+        <div className="news-card-meta">
+          <span className="news-tag">{article.tag}</span>
+          <p className="news-date">{article.date}</p>
+          <h4 className="news-card-title">{article.title}</h4>
+        </div>
+      </div>
+    ))}
+  </div>
 
- </div>
+  <div className="news-pagination">
+    {newsPages.map((_, i) => (
+      <span
+        key={i}
+        className={`news-dot ${i === newsPage ? 'active' : ''}`}
+        onClick={() => setNewsPage(i)}
+      ></span>
+    ))}
+  </div>
+</div>
+</div>
+ 
   )
 }
 
