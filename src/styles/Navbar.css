@@ -199,3 +199,42 @@
   color: #fff;
   background: #1a1a1a;
 }
+
+.ownership-button{
+    background:none;
+    border:none;
+    color:white;
+    cursor:pointer;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.ownership-page{
+    padding:60px 80px;
+}
+
+.ownership-back{
+    background:none;
+    border:2px solid white;
+    color:white;
+    font-size:20px;
+    font-weight:700;
+    padding:14px 24px;
+    cursor:pointer;
+    margin-bottom:50px;
+}
+
+.ownership-links{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.ownership-link{
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:700;
+}
