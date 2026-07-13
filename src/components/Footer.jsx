@@ -11,11 +11,16 @@ const Footer = () => {
      {/* Main links grid */}
       <div className="footer-links">
         <div className="footer-col">
-          <Link to="#">COMPANY</Link>
-          <Link to="#">SUSTAINABILITY</Link>
-          <Link to="#">COOKIE SETTINGS</Link>
+          <Link to="/company">COMPANY</Link>
+         
         </div>
-        <div className="footer-col">
+          <div className="footer-col">  <Link to="/models">MODELS</Link></div>
+            <div className="footer-col"><Link to="/meseum">MESEUM</Link></div>
+              <div className="footer-col">  <Link to="/news">NEWSLETTER</Link></div>
+       
+          
+        
+        {/* <div className="footer-col">
           <Link to="#">FINANCIALS</Link>
           <Link to="#">MEDIA CENTER</Link>
           <Link to="#">SITEMAP</Link>
@@ -29,7 +34,7 @@ const Footer = () => {
           <Link to="#">NEWSLETTER</Link>
           <Link to="#">CONTACT US</Link>
           <Link to="#">ACCESSIBILITY</Link>
-        </div>
+        </div> */}
         <div className="footer-social">
           <p className="social-label">Follow us on:</p>
           <div className="social-row">

@@ -8,6 +8,11 @@ import Contact from './pages/Contact'
 import './styles/global.css'
 import Dealerships from './pages/Dealerships'
 import Company from "./pages/Company";
+import Beyond from './pages/Beyond'
+import Motorsport from './pages/Motorsport'
+import Museum from './pages/Museum'
+import Store from './pages/Store'
+import News from './pages/News'
 
 function App() {
   return (
@@ -20,6 +25,13 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/dealerships" element={<Dealerships />} />
         <Route path="/company" element={<Company />} />
+        <Route path="/beyond" element={<Beyond />} />
+        <Route path="/motorsport" element={<Motorsport />} />
+        <Route path="/museum" element={<Museum />} />
+        <Route path="/store" element={<Store />} />
+        <Route path="/news" element={<News />} />
+
+
       </Routes>
       <Footer />
     </BrowserRouter>
